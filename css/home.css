@@ -13,6 +13,7 @@
     outline: none;
     border: none;
     font-family: 'Poppins', sans-serif;
+    text-decoration: none;
 }
 
 html {
@@ -25,6 +26,10 @@ html {
 
 section {
     padding: 2rem 7%;
+}
+
+a {
+    text-decoration: none;
 }
 
 .header {
@@ -171,7 +176,168 @@ section {
 .container {
     display: grid;
     grid-template-columns: 2.5fr 1fr;
-    gap: 1.5rem
+    gap: 1.5rem;
+    background: rgb(255, 255, 255);
+}
+
+.container .post-container .post {
+    width: 100%;
+    padding: 2rem;
+    background: #fff;
+    border: var(--border);
+    border-radius: .5rem;
+    margin-bottom: 1.5rem;
+}
+
+.container .post-container .post .image {
+    height: 40rem;
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+.container .post-container .post .date {
+    padding-top: 2rem;
+    font-size: 1.5rem;
+    color: #4481eb;
+}
+
+.container .post-container .post .title {
+    padding-top: 1.5rem;
+    font-size: 2.5rem;
+    color: black;
+}
+
+.container .post-container .post .text {
+    color: var(--light-color);
+    font-size: 1.6rem;
+    line-height: 1.7rem;
+    padding: 1rem 0;
+}
+
+.container .post-container .links {
+    border-top: var(--border);
+    margin-top: .5rem;
+    padding-top: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.container .post-container .links .user {
+    margin-right: auto;
+}
+
+.container .post-container .links .icon {
+    padding-right: 1rem;
+}
+
+.container .post-container .links a {
+    font-size: 1.5rem;
+    color: var(--light-color);
+    text-decoration: none;
+}
+
+.container .post-container .links a i {
+    padding-right: .2rem;
+    color: var(--black)
+}
+
+.container .post-container .links a:hover {
+    color: #4481eb;
+}
+
+.container .post-container .links a:hover i {
+    color: #4481eb;
+}
+
+.container .sidebar .box {
+    border: var(--border);
+    border-radius: .5rem;
+    overflow: hidden;
+    background: #FFF;
+    margin-bottom: 1.5rem;
+}
+
+.container .sidebar .box .title {
+    padding: 1.5rem;
+    font-size: 2rem;
+    color: #fff;
+    background: #000;
+    text-transform: capitalize;
+}
+
+.container .sidebar .box .about {
+    text-align: center;
+    padding: 1rem 1.5rem;
+}
+
+.container .sidebar .box .about img {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 35%;
+    object-fit: cover;
+    margin: 1rem 0;
+}
+
+.container .sidebar .box .about h3 {
+    color: #4481eb;
+    font-size: 2rem;
+}
+
+.container .sidebar .box .about p {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding: 1rem 0;
+}
+
+.container .sidebar .box .about .follow {
+    padding: 1rem 0;
+}
+
+.container .sidebar .box .about .follow a {
+    height: 4rem;
+    line-height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    background: var(--black);
+    color: #fff;
+    font-size: 1.7rem;
+    margin: 0 .1rem;
+    text-decoration: none
+}
+
+.container .sidebar .box .about .follow a:hover {
+    background: #4481eb;
+}
+
+.container .sidebar .box .category {
+    padding: 1rem 1.5rem;
+}
+
+.container .sidebar .box .category a {
+    padding: .4rem 0;
+    font-size: 1.5rem;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.container .sidebar .box .category a span {
+    background: var(--light-color);
+    color: #fff;
+    border-radius: .5rem;
+    padding: .5rem;
+}
+
+.container .sidebar .box .category a:hover {
+    color: #4481eb;
+}
+
+.container .sidebar .box .category a:hover span {
+    background-color: #4481eb;
 }
 
 
@@ -183,6 +349,9 @@ section {
     }
     .header {
         padding: 1.5rem;
+    }
+    .container {
+        grid-template-columns: 2fr 1fr;
     }
 }
 
@@ -219,5 +388,9 @@ section {
         margin: 1.5rem;
         border-radius: .5rem;
         border: var(--border);
+    }
+    .container {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
     }
 }
