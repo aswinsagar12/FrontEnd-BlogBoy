@@ -1,21 +1,28 @@
-const blogSection = document.querySelector('.blogs-section');
+let menu = document.querySelector('#menu-bars');
+let navbar = document.querySelector('.navbar');
 
-db.collection("blogs").get().then((blogs) => {
-    blogs.forEach(blog => {
-        if (blog.id != decodeURI(location.pathname.split("/").pop())) {
-            createBlog(blog);
-        }
-    })
-})
+menu.onclick = () => {
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+}
+window.onscroll = () => {
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
+}
 
-const createBlog = (blog) => {
-    let data = blog.data();
-    blogSection.innerHTML += `
-    <div class="blog-card">
-        <img src="${data.bannerImage}" class="blog-image" alt="">
-        <h1 class="blog-title">${data.title.substring(0, 100) + '...'}</h1>
-        <p class="blog-overview">${data.article.substring(0, 200) + '...'}</p>
-        <a href="/${blog.id}" class="btn dark">read</a>
-    </div>
-    `;
+
+let searchIcon = document.querySelector('#search-icon');
+let searchForm = document.querySelector('.search-form');
+
+searchIcon.onclick = () => {
+    searchIcon.classList.toggle('fa-times');
+    searchForm.classList.toggle('active');
+}
+window.onscroll = () => {
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
+
+
+    searchIcon.classList.remove('fa-times');
+    searchForm.classList.remove('active');
 }
